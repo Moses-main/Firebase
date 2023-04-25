@@ -2,8 +2,8 @@
 My Learning Path W/Firebase
 
 
-# STEP TO FOLLOW
-# ***1. Open or create a firebase account on console.firebase.google.com***
+# STEPS FOLLOWED
+***1. Open or create a firebase account on console.firebase.google.com***
 Create a python file <filename.py>
 
 **2. Install Pyrebase using the pip package manager**
