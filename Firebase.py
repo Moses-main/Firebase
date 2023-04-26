@@ -1,6 +1,7 @@
+'''import modules needed for the project'''
 # from firebase_admin import credentials
 # import pyrebase
-from Secret import *
+# from Secret import *
 # import firebase_admin
 
 '''
