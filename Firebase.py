@@ -1,19 +1,32 @@
-# // Import the functions you need from the SDKs you need
-import {initializeApp} from "firebase/app"
-import firebase
-from Firebase import fireb
-# // TODO: Add SDKs for Firebase products that you want to use
-# // https://firebase.google.com/docs/web/setup#available-libraries
+# from firebase_admin import credentials
+import pyrebase
+from Secret import *
+# import firebase_admin
 
-# // Your web app's Firebase configuration
-firebaseConfig = {
-    "apiKey": "AIzaSyDGf5JGQiH7WjKgggcroxkbV1O9J0dNH88",
-    "authDomain": "sharex-23a85.firebaseapp.com",
-    "projectId": "sharex-23a85",
-    "storageBucket": "sharex-23a85.appspot.com",
-    "messagingSenderId": "884548072010",
-    "appId": "1:884548072010:web:bb78e313294269fd79acb3"
-}
+'''
+This is the ShareX Project
+Then the CLI project for a command line app
+
+All the data on the configuration file are all
+gotten from the CLI app in the ShareX Project
+'''
 
 # // Initialize Firebase
-app = initializeApp(firebaseConfig)
+# app = firebase. initializeApp(firebaseConfig)
+firebase = pyrebase.initialize_app(config)
+
+
+# cred = credentials.Certificate("path/to/serviceAccountKey.json")
+# path = Sharex_admin
+# cred = credentials.Certificate("path")
+
+# firebase_admin.initialize_app(cred)
+
+db = firebase.database()
+# Push Data
+data = {
+    "name": "Moses",
+    "age": 23,
+    "address": ["Nigeria", "Abia State"]
+}
+db.push(data)
